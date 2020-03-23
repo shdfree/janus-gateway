@@ -93,7 +93,26 @@ general: {
 	# you want to use strings instead (e.g., a UUID), set string_ids to true.
 	#string_ids = true
 }
-
+rtsp-test1: {
+        type = "rtsp"
+        id = 98
+        description = "Local RTSP Test"
+        audio = false
+        video = true
+        url = "rtsp://192.168.4.73:554/channel1"
+        rtsp_user = "admin"
+        rtsp_pwd = "qwe123QWE"
+        videofmtp = "profile-level-id=42e01f;packetization-mode=1"
+}
+rtsp-test2: {
+        type = "rtsp"
+        id = 99
+        description = "External RTSP(S3L RDK Board) Test"
+        audio = false
+        video = true
+        url = "rtsp://192.168.4.61:554/stream1"
+#       url = "rtsp://192.168.1.168:554" # realtek rdk
+}
 gstreamer-sample: {
 	type = "rtp"
 	id = 1
